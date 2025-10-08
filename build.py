@@ -23,6 +23,10 @@ print(build_settings)
 
 for page in build_settings["pages"]:
 	input = open(page, mode="r")
-	output = open("static/" + page,)
+	try:
+		output = open("static/" + page, mode="w")
+	except:
+		output = open("static/" + page, mode="x")
 	build(input, output)
-	page.close()
+	input.close()
+	output.close()
