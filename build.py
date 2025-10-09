@@ -3,10 +3,11 @@ import argparse as ap
 import json
 
 def build(input,output):
-	initial = input.read()
+	original = input.read()
+	processed = ""	
 
 	output.seek(0)
-	output.write(initial + "\nHello preprocessor!")
+	output.write(processed)
 
 parser = ap.ArgumentParser("Build.py", description="Runs a preprocessing script across all the site's files.")
 parser.add_argument("--mode", help="Determines whether the build will be a dev build or a release build. Must be one of 'DEV' or 'RELEASE'", type=str)
