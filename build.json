@@ -1,8 +1,9 @@
 {
-	"pages": [
-		"./index.html"
-	],
-	"components": [
-	
-	]
+	"index.html": { "name": "Home", "type": "page" },
+	"Assets": { 
+		"Icons": {
+			"10 October.png": { "name": "Icon", "type": "asset" }
+		}
+	},
+	"Components": {}
 }
