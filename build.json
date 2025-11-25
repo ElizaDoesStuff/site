@@ -5,5 +5,7 @@
 			"10 October.png": { "name": "Icon", "type": "asset" }
 		}
 	},
-	"Components": {}
+	"Components": {
+		"Header.html": { "name": "Header", "type": "component" }
+	}
 }

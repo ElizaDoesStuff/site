@@ -36,6 +36,7 @@ if args.clean and os.path.exists("Static"):
 	shutil.rmtree("Static")
 
 assets_table = {}
+components_table = {}
 
 #############################################################################################################################################################
 ## @@@  @  @ @@@@ @    @@@  @@@@ @  @ @@@@      @@@@ @@@@ @@@@ @@@@ @@@@
@@ -60,6 +61,9 @@ def build_page(file):
 	cooked = re.sub( r"(\w+?)\={(\w+)\}", lambda match: f"{match[1]}='{assets_table[ match[2] ]}'", cooked )
 	cooked = re.sub( r"\{(\w+)\}", lambda match: f"<img src='{ assets_table[ match[1] ]}'/>", cooked )
 	print(cooked)
+
+	# Process components
+	
 
 	output.write(cooked)
 
